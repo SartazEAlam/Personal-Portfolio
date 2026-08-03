@@ -2,7 +2,8 @@
 
 A modern, high-performance, dark-themed personal portfolio showcasing my engineering background, technical skill set, featured projects, certifications, and education.
 
-🌐 **Live Demo:** [https://sartazealam.github.io/Personal-Portfolio/](https://sartazealam.github.io/Personal-Portfolio/)
+🌐 **Live Demo:** [https://sartaz-portfolio.vercel.app/](https://sartaz-portfolio.vercel.app/)  
+*(Alternative Mirror: [https://sartazealam.github.io/Personal-Portfolio/](https://sartazealam.github.io/Personal-Portfolio/))*
 
 ---
 
@@ -32,7 +33,7 @@ A modern, high-performance, dark-themed personal portfolio showcasing my enginee
 - **Core**: HTML5, CSS3 (Modern Vanilla CSS & Custom Design System), Vanilla JavaScript (ES6+)
 - **Framework & Libraries**: Bootstrap 5.3.8, DevIcons, Bootstrap Icons
 - **Typography**: Google Fonts (*Inter*, *Poppins*)
-- **Deployment**: GitHub Pages
+- **Deployment**: Vercel & GitHub Pages
 
 ---
 
