@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09131f"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <filter id="emeraldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Square / Circle -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bgGrad)" stroke="#22c55e" stroke-width="2.5" stroke-opacity="0.8"/>
+  
+  <!-- Subtle Inner Ring -->
+  <rect x="6" y="6" width="52" height="52" rx="12" fill="none" stroke="#22c55e" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- SEA Monogram -->
+  <text x="32" y="39" 
+        font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="22" 
+        font-weight="900" 
+        letter-spacing="-0.5px"
+        fill="url(#glowGrad)" 
+        text-anchor="middle"
+        filter="url(#emeraldGlow)">SEA</text>
+</svg>
