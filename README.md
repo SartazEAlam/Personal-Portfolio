@@ -21,7 +21,7 @@ A modern, high-performance, dark-themed personal portfolio showcasing my enginee
 - **Experience & Certifications Carousel**:
   - **The Entrepreneurship Network (TEN)**: Interactive dual-slide carousel for Letter of Completion (LOC) & Letter of Recommendation (LOR).
   - **Reliance Foundation Skilling Academy**: NSDC-verified Artificial Intelligence course certificate (270 Hours).
-- **Education Timeline**: Chronological academic journey spanning **Gauhati University** (B.Tech CSE), **K.C. Das Commerce College** (Higher Secondary Science), and **Happy Child English School** (HSLC).
+- **Education Timeline**: Chronological academic journey spanning **Gauhati University** (B.Tech CSE), **Gurukul Group of Educational Wings** (Higher Secondary Science), and **Happy Child English School** (HSLC).
 - **Get In Touch & Social Hub**: Glassmorphism contact showcase card with direct email trigger, CV download, quick metadata pills, and social platform buttons.
 - **Responsive Architecture**: Fully responsive and mobile-optimized across all viewports (Mobile, Tablet, Desktop) with custom touch-friendly navigation.
 
