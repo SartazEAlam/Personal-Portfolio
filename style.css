@@ -123,6 +123,122 @@ section {
 
 
 /* 7. Hero Card & Syntax Highlighting */
+/* Unique Animated Orbiting Border-Beam Tag */
+.hero-beam-tag {
+  position: relative;
+  display: inline-flex;
+  padding: 1.5px;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+  box-shadow: 0 0 25px -5px rgba(34, 197, 94, 0.25), 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+/* Orbiting Laser Beam */
+.hero-beam-tag::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent 0deg,
+    transparent 280deg,
+    rgba(34, 197, 94, 0.2) 310deg,
+    #22c55e 340deg,
+    #86efac 360deg
+  );
+  animation: rotateLaser 3.5s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateLaser {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hero-beam-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px 2px rgba(34, 197, 94, 0.45), 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hero-beam-tag:hover::before {
+  animation-duration: 2s;
+}
+
+/* Inner Core */
+.hero-beam-inner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #090d16;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 7px 18px 7px 8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Mini Tag / Terminal Chip */
+.beam-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #4ade80;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.beam-chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.beam-chip code {
+  color: #4ade80;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Tag Text */
+.beam-text {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.83rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+/* Blinking Terminal Cursor */
+.beam-cursor {
+  color: var(--accent-green);
+  font-weight: 700;
+  font-family: 'Fira Code', monospace;
+  animation: blinkCursor 1s infinite steps(2, start);
+  margin-left: -4px;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .hero-wrapper {
   overflow-x: hidden; /* Clips any decorative elements that go off-screen */
   background: radial-gradient(circle at 90% 10%, rgba(34, 197, 94, 0.05) 0%, rgba(2, 6, 23, 1) 50%);
@@ -610,8 +726,14 @@ svg{
 }
 
 /* ============================
-   8.7 About Me Profile Avatar Card
+   8.7 About Me Profile Avatar Card & Text
    ============================ */
+.about-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.75;
+}
+
 .about-pfp-container {
   display: flex;
   flex-direction: column;
@@ -1043,6 +1165,25 @@ svg{
 
 /* Small Phone (≤480px) */
 @media (max-width: 480px) {
+  .hero-beam-tag {
+    max-width: 100%;
+  }
+
+  .hero-beam-inner {
+    padding: 6px 12px 6px 6px;
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+
+  .beam-chip {
+    font-size: 0.74rem;
+    padding: 2px 7px;
+  }
+
+  .beam-text {
+    font-size: 0.76rem;
+  }
+
   .hero-wrapper h1.display-1 {
     font-size: 1.9rem;
   }
