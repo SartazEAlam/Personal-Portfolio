@@ -10,21 +10,13 @@ A modern, high-performance, dark-themed personal portfolio showcasing my enginee
 ## ✨ Key Features & Highlights
 
 - **Hero Section**: Sleek dark mode typography, glowing neon accents, and an interactive pseudo-IDE terminal widget (`sartaz.js`).
-- **About Me & Circular Avatar**: Custom glowing circular profile avatar (`border-radius: 50%`) with a live pulsing `Available for Internships '26` status pill and core engineering focus pillars.
-- **Skills Matrix**: Categorized technical proficiency showcase with DevIcons covering:
-  - *Frontend*: React, JavaScript, HTML5, CSS3, Tailwind CSS, Bootstrap 5
-  - *Backend*: Node.js, Express.js, FastAPI, MongoDB, MySQL, Redis, JWT
-  - *AI / ML*: Faster-Whisper, Ollama (Qwen 2.5), SQLAlchemy, SQLite
-  - *Tools & Real-Time*: Git, GitHub, VS Code, Postman, WebRTC, Socket.io
-- **Interactive Project Showcase with Filters**:
-  - Dynamic category filtering tabs (*All, AI & Real-Time, Full-Stack, Backend & APIs, Frontend & Tools*).
-  - 8 production-grade projects including **AI Meeting Summarizer (Local LLM & Faster-Whisper)**, **ShopNext MERN E-Commerce**, **WebRTC Video Meeting App**, **Instagram Clone**, and more.
-- **Experience & Certifications Carousel**:
-  - **The Entrepreneurship Network (TEN)**: Interactive dual-slide carousel for Letter of Completion (LOC) & Letter of Recommendation (LOR).
-  - **Reliance Foundation Skilling Academy**: NSDC-verified Artificial Intelligence course certificate (270 Hours).
-- **Education Timeline**: Chronological academic journey spanning **Gauhati University** (B.Tech CSE), **Gurukul Group of Educational Wings** (Higher Secondary Science), and **Happy Child English School** (HSLC).
-- **Get In Touch & Social Hub**: Glassmorphism contact showcase card with direct email trigger, CV download, quick metadata pills, and social platform buttons.
-- **Responsive Architecture**: Fully responsive and mobile-optimized across all viewports (Mobile, Tablet, Desktop) with custom touch-friendly navigation.
+- **About & Profile**: Custom glowing circular avatar with a live pulsing status pill and core engineering focus pillars.
+- **Skills Matrix**: Categorized technical proficiency showcase with DevIcons across Frontend, Backend, AI/ML, and Developer Tools.
+- **Interactive Project Showcase**: Dynamic category filtering tabs (*All, AI & Real-Time, Full-Stack, Backend & APIs, Frontend & Tools*) with rich card UI and direct repository links.
+- **Experience & Certifications**: Interactive cards and dual-slide carousel showcasing verified internships, industry credentials, and recommendation letters with high-res image previews.
+- **Education Timeline**: Chronological academic journey and qualifications.
+- **Contact & Social Hub**: Glassmorphism contact showcase card with direct email trigger, CV download, and social platform buttons.
+- **Responsive Architecture**: Fully responsive and mobile-optimized across all viewports (Mobile, Tablet, Desktop) with custom touch-friendly navigation and smooth scroll animations.
 
 ---
 
@@ -41,18 +33,13 @@ A modern, high-performance, dark-themed personal portfolio showcasing my enginee
 
 ```
 portfolio/
-├── certificates/
-│   ├── Reliance_Skill_India_AI.png
-│   ├── TEN-LOC.png
-│   └── TEN-LOR.png
-├── images/
-│   ├── icons/
-│   └── pfp.png
-├── index.html
-├── style.css
-├── script.js
-├── Sartaz_E_Alam_CV.pdf
-└── README.md
+├── certificates/         # Verified certificates & recommendation documents
+├── images/               # Profile avatar, icons, and media assets
+├── index.html            # Main semantic markup and site structure
+├── style.css             # Modern responsive CSS design system
+├── script.js             # Interactive filtering, animations, and behaviors
+├── Sartaz_E_Alam_CV.pdf  # Downloadable curriculum vitae
+└── README.md             # Project overview and documentation
 ```
 
 ---
