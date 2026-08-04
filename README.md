@@ -58,13 +58,4 @@ portfolio/
 
 ---
 
-## 📬 Contact & Connect
-
-- **Email**: [sartazealam101@gmail.com](mailto:sartazealam101@gmail.com)
-- **LinkedIn**: [linkedin.com/in/sartaz-e-alam-7b7292289](https://www.linkedin.com/in/sartaz-e-alam-7b7292289)
-- **GitHub**: [github.com/SartazEAlam](https://github.com/SartazEAlam)
-- **X (Twitter)**: [@alam_sartaz07](https://x.com/alam_sartaz07)
-
----
-
 Built with 💚 and precision by **Sartaz E Alam**.
