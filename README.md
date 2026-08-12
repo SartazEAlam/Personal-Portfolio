@@ -12,8 +12,8 @@ A modern, high-performance, dark-themed personal portfolio showcasing my enginee
 - **Hero Section**: Sleek dark mode typography, glowing neon accents, and an interactive pseudo-IDE terminal widget (`sartaz.js`).
 - **About & Profile**: Custom glowing circular avatar with a live pulsing status pill and core engineering focus pillars.
 - **Skills Matrix**: Categorized technical proficiency showcase with DevIcons across Frontend, Backend, AI/ML, and Developer Tools.
-- **Interactive Project Showcase**: Dynamic category filtering tabs (*All, AI & Real-Time, Full-Stack, Backend & APIs, Frontend & Tools*) with rich card UI and direct repository links.
-- **Experience & Certifications**: Interactive cards and dual-slide carousel showcasing verified internships, industry credentials, and recommendation letters with high-res image previews.
+- **Interactive Project Showcase**: Powered by a highly customized **Swiper.js 3D Coverflow Carousel**, featuring direct repository links and categorized tech-stack badges.
+- **Experience & Certifications**: Deep 3D cylinder interactive carousel showcasing verified internships (APDCL, AAI, DFS), industry credentials, and recommendation letters with Govt Verified badges.
 - **Education Timeline**: Chronological academic journey and qualifications.
 - **Contact & Social Hub**: Glassmorphism contact showcase card with direct email trigger, CV download, and social platform buttons.
 - **Responsive Architecture**: Fully responsive and mobile-optimized across all viewports (Mobile, Tablet, Desktop) with custom touch-friendly navigation and smooth scroll animations.
@@ -23,7 +23,7 @@ A modern, high-performance, dark-themed personal portfolio showcasing my enginee
 ## 🛠️ Tech Stack
 
 - **Core**: HTML5, CSS3 (Modern Vanilla CSS & Custom Design System), Vanilla JavaScript (ES6+)
-- **Framework & Libraries**: Bootstrap 5.3.8, DevIcons, Bootstrap Icons
+- **Framework & Libraries**: Bootstrap 5.3.8, Swiper.js (for advanced 3D touch carousels), DevIcons, Bootstrap Icons
 - **Typography**: Google Fonts (*Inter*, *Poppins*)
 - **Deployment**: Vercel & GitHub Pages
 
