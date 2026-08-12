@@ -17,10 +17,12 @@ const projectsSwiper = new Swiper('.projects-swiper', {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 'auto',
+  loop: true,
+  touchRatio: 1.5, // Makes it easier to swipe
   coverflowEffect: {
-    rotate: 30,
-    stretch: 0,
-    depth: 150,
+    rotate: 20,
+    stretch: 50, // Adds space between the slides
+    depth: 100,
     modifier: 1,
     slideShadows: true,
   },
@@ -36,10 +38,13 @@ const certsSwiper = new Swiper('.certs-swiper', {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 'auto',
+  initialSlide: 2, // Starts right at the middle card (index 2 of 5)
+  loop: false,
+  touchRatio: 1.5,
   coverflowEffect: {
-    rotate: 20,
-    stretch: 0,
-    depth: 150,
+    rotate: 15,
+    stretch: 50,
+    depth: 100,
     modifier: 1,
     slideShadows: true,
   },
@@ -52,8 +57,8 @@ const certsSwiper = new Swiper('.certs-swiper', {
 // Project Category Filtering via Swiper DOM manipulation
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectsWrapper = document.querySelector(".projects-swiper .swiper-wrapper");
-// Keep a copy of all original project slides
-const allProjects = Array.from(document.querySelectorAll(".projects-swiper .swiper-slide"));
+// Keep a copy of all original project slides (excluding Swiper's loop duplicates)
+const allProjects = Array.from(document.querySelectorAll(".projects-swiper .swiper-slide:not(.swiper-slide-duplicate)"));
 
 filterButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -63,19 +68,30 @@ filterButtons.forEach((btn) => {
 
     const filterValue = btn.getAttribute("data-filter");
 
-    // Clear current slides from the DOM
+    // Clear current slides from the DOM completely
     projectsWrapper.innerHTML = '';
+    projectsSwiper.loopDestroy(); // Temporarily destroy loop to prevent duplicate bugs
 
     // Append matching slides back to the DOM
     allProjects.forEach((item) => {
       const categories = (item.getAttribute("data-category") || "").split(" ");
       if (filterValue === "all" || categories.includes(filterValue)) {
-        item.classList.add("show"); // Keep it visible without re-triggering observer
-        projectsWrapper.appendChild(item);
+        item.classList.add("show");
+        projectsWrapper.appendChild(item.cloneNode(true));
       }
     });
 
-    // Update Swiper layout and pagination after DOM changes
+    // Re-initialize Swiper
+    projectsSwiper.update();
+    
+    // Only enable loop if we have enough slides, otherwise it glitches
+    if (filterValue === "all") {
+      projectsSwiper.params.loop = true;
+      projectsSwiper.loopCreate();
+    } else {
+      projectsSwiper.params.loop = false;
+    }
+    
     projectsSwiper.update();
     projectsSwiper.slideTo(0);
   });
