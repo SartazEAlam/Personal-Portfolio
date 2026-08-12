@@ -1219,56 +1219,43 @@ svg{
     box-shadow: none;
   }
 }
-/* --- Horizontal Scroller for Projects & Certifications --- */
-.horizontal-scroller {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1.5rem;
-  padding-bottom: 1.5rem;
-  -webkit-overflow-scrolling: touch;
-  flex-wrap: nowrap;
+/* --- Swiper 3D Coverflow Adjustments --- */
+.swiper {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
 }
-.horizontal-scroller::-webkit-scrollbar {
-  height: 8px;
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 350px !important;
+  height: auto;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
 }
-.horizontal-scroller::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
+
+.swiper-slide-active {
+  opacity: 1;
 }
-.horizontal-scroller::-webkit-scrollbar-thumb {
-  background: rgba(34, 197, 94, 0.5);
-  border-radius: 10px;
+
+.swiper-slide .project-card, 
+.swiper-slide .cert-card {
+  height: 100%;
+  width: 100%;
 }
-.horizontal-scroller::-webkit-scrollbar-thumb:hover {
-  background: rgba(34, 197, 94, 0.8);
-}
-.horizontal-scroller > div {
-  min-width: 350px;
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-}
+
 @media (max-width: 768px) {
-  .horizontal-scroller > div {
-    min-width: 85vw;
+  .swiper-slide {
+    width: 85vw !important;
   }
 }
 
-.project-hidden {
-  display: none !important;
+.swiper-pagination-bullet {
+  background: var(--text-muted);
 }
 
-
-.horizontal-scroller > div {
-  min-width: 350px !important;
-  max-width: 450px !important;
-  width: auto !important;
-  flex: 0 0 auto !important;
-  padding: 0 !important;
-}
-@media (max-width: 768px) {
-  .horizontal-scroller > div {
-    min-width: 85vw !important;
-  }
+.swiper-pagination-bullet-active {
+  background: var(--primary-color, #22c55e) !important;
 }
 

@@ -29,6 +29,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="style.css" />
 
@@ -363,7 +364,7 @@
 
       <div class="mb-5 fade-up delay-2">
         <h4 class="highlight mb-4">
-          🤖 AI / ML
+          🤖 AI / ML & Databases
         </h4>
         <div class="row g-4">
           <div class="col-6 col-md-3">
@@ -382,6 +383,20 @@
           </div>
           <div class="col-6 col-md-3">
             <div class="skill-item text-center">
+              <i class="devicon-python-plain colored display-4"></i>
+              <p class="mt-2 mb-0">NLP</p>
+              <small class="text-info fw-bold">Transformers</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-item text-center">
+              <i class="devicon-pytorch-plain colored display-4"></i>
+              <p class="mt-2 mb-0">Machine Learning</p>
+              <small class="text-info fw-bold">AI Models</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-item text-center">
               <i class="devicon-sqlalchemy-plain display-4" style="color: #ffffff"></i>
               <p class="mt-2">SQLAlchemy</p>
             </div>
@@ -390,6 +405,12 @@
             <div class="skill-item text-center">
               <i class="devicon-sqlite-plain colored display-4"></i>
               <p class="mt-2">SQLite</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="skill-item text-center">
+              <i class="devicon-mysql-plain colored display-4"></i>
+              <p class="mt-2">MySQL</p>
             </div>
           </div>
         </div>
@@ -466,10 +487,11 @@
         </button>
       </div>
 
-      <div class="horizontal-scroller" id="projectsGrid">
+      <div class="swiper projects-swiper" id="projectsGrid">
+        <div class="swiper-wrapper">
 
         <!-- 1. AstraAI — Resume Analyzer (Featured) -->
-        <div class="col-md-6 col-lg-6 project-item fade-up" data-category="ai-realtime fullstack">
+        <div class="swiper-slide project-item fade-up" data-category="ai-realtime fullstack">
           <div class="project-card project-featured h-100 p-4">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <div>
@@ -496,7 +518,7 @@
         </div>
 
         <!-- 2. AI Meeting Summarizer (APDCL) -->
-        <div class="col-md-6 col-lg-6 project-item fade-up delay-1" data-category="ai-realtime fullstack">
+        <div class="swiper-slide project-item fade-up delay-1" data-category="ai-realtime fullstack">
           <div class="project-card h-100 p-4">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <div>
@@ -523,7 +545,7 @@
         </div>
 
         <!-- 2. MERN E-Commerce Platform -->
-        <div class="col-md-6 col-lg-6 project-item fade-up delay-1" data-category="fullstack backend">
+        <div class="swiper-slide project-item fade-up delay-1" data-category="fullstack backend">
           <div class="project-card h-100 p-4">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <div>
@@ -550,7 +572,7 @@
         </div>
 
         <!-- 3. Video Meeting Application -->
-        <div class="col-md-6 col-lg-6 project-item fade-up delay-1" data-category="ai-realtime fullstack">
+        <div class="swiper-slide project-item fade-up delay-1" data-category="ai-realtime fullstack">
           <div class="project-card h-100 p-4">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <div>
@@ -576,7 +598,7 @@
         </div>
 
         <!-- 4. Instagram Clone App -->
-        <div class="col-md-6 col-lg-6 project-item fade-up delay-2" data-category="fullstack backend">
+        <div class="swiper-slide project-item fade-up delay-2" data-category="fullstack backend">
           <div class="project-card h-100 p-4">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <div>
@@ -603,7 +625,7 @@
         </div>
 
         <!-- 5. Code Editor -->
-        <div class="col-md-6 col-lg-6 project-item fade-up delay-2" data-category="frontend">
+        <div class="swiper-slide project-item fade-up delay-2" data-category="frontend">
           <div class="project-card h-100 p-4">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <div>
@@ -629,7 +651,7 @@
         </div>
 
         <!-- 6. Smart Fuel Ordering System -->
-        <div class="col-md-6 col-lg-6 project-item fade-up delay-3" data-category="frontend">
+        <div class="swiper-slide project-item fade-up delay-3" data-category="frontend">
           <div class="project-card h-100 p-4">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <div>
@@ -655,7 +677,7 @@
         </div>
 
         <!-- 7. URL Shortener -->
-        <div class="col-md-6 col-lg-6 project-item fade-up delay-3" data-category="backend">
+        <div class="swiper-slide project-item fade-up delay-3" data-category="backend">
           <div class="project-card h-100 p-4">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <div>
@@ -681,7 +703,7 @@
         </div>
 
         <!-- 8. Car Vault System -->
-        <div class="col-md-6 col-lg-6 project-item fade-up delay-4" data-category="frontend">
+        <div class="swiper-slide project-item fade-up delay-4" data-category="frontend">
           <div class="project-card h-100 p-4">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <div>
@@ -706,6 +728,8 @@
           </div>
         </div>
 
+        </div>
+        <div class="swiper-pagination mt-4"></div>
       </div>
     </section>
 
@@ -713,9 +737,10 @@
     <section id="certifications" class="container py-5">
       <h2 class="section-title mb-5">04. Experience & Certifications</h2>
 
-      <div class="horizontal-scroller">
+      <div class="swiper certs-swiper">
+        <div class="swiper-wrapper">
         <!-- 1. The Entrepreneurship Network (TEN) - Carousel Card -->
-        <div class="col-lg-4 col-md-6 fade-up">
+        <div class="swiper-slide fade-up">
           <div class="cert-card">
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-start mb-3">
@@ -813,7 +838,7 @@
         </div>
 
         <!-- 2. Reliance Foundation Skilling Academy - Standard Card -->
-        <div class="col-lg-4 col-md-6 fade-up delay-1">
+        <div class="swiper-slide fade-up delay-1">
           <div class="cert-card">
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-start mb-3">
@@ -861,7 +886,7 @@
         </div>
 
         <!-- 3. Directorate of Forensic Science, Assam - Standard Card -->
-        <div class="col-lg-4 col-md-12 fade-up delay-2">
+        <div class="swiper-slide fade-up delay-2">
           <div class="cert-card">
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-start mb-3">
@@ -909,7 +934,7 @@
         </div>
 
         <!-- 4. Assam Power Distribution Company Limited (APDCL) -->
-        <div class="col-lg-4 col-md-6 fade-up delay-1">
+        <div class="swiper-slide fade-up delay-1">
           <div class="cert-card">
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-start mb-3">
@@ -959,7 +984,7 @@
         </div>
 
         <!-- 5. Airports Authority of India (AAI) -->
-        <div class="col-lg-4 col-md-6 fade-up delay-2">
+        <div class="swiper-slide fade-up delay-2">
           <div class="cert-card">
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-start mb-3">
@@ -1003,6 +1028,8 @@
           </div>
         </div>
 
+        </div>
+        <div class="swiper-pagination mt-4"></div>
       </div>
     </section>
 
@@ -1193,6 +1220,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
     <!-- Vercel Web Analytics -->
     <script>

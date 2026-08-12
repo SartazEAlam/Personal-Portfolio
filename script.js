@@ -11,9 +11,49 @@ const observer = new IntersectionObserver((entries) => {
 
 elements.forEach((el) => observer.observe(el));
 
-// Project Category Filtering
+// Initialize Swiper for Projects
+const projectsSwiper = new Swiper('.projects-swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 30,
+    stretch: 0,
+    depth: 150,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: '.projects-swiper .swiper-pagination',
+    clickable: true,
+  },
+});
+
+// Initialize Swiper for Certifications
+const certsSwiper = new Swiper('.certs-swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 20,
+    stretch: 0,
+    depth: 150,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: '.certs-swiper .swiper-pagination',
+    clickable: true,
+  },
+});
+
+// Project Category Filtering via Swiper DOM manipulation
 const filterButtons = document.querySelectorAll(".filter-btn");
-const projectItems = document.querySelectorAll(".project-item");
+const projectsWrapper = document.querySelector(".projects-swiper .swiper-wrapper");
+// Keep a copy of all original project slides
+const allProjects = Array.from(document.querySelectorAll(".projects-swiper .swiper-slide"));
 
 filterButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -23,18 +63,20 @@ filterButtons.forEach((btn) => {
 
     const filterValue = btn.getAttribute("data-filter");
 
-    projectItems.forEach((item) => {
+    // Clear current slides from the DOM
+    projectsWrapper.innerHTML = '';
+
+    // Append matching slides back to the DOM
+    allProjects.forEach((item) => {
       const categories = (item.getAttribute("data-category") || "").split(" ");
       if (filterValue === "all" || categories.includes(filterValue)) {
-        item.classList.remove("project-hidden");
-        item.classList.add("project-visible");
-        // Ensure fade-up animation shows
-        item.classList.add("show");
-      } else {
-        item.classList.add("project-hidden");
-        item.classList.remove("project-visible");
+        item.classList.add("show"); // Keep it visible without re-triggering observer
+        projectsWrapper.appendChild(item);
       }
     });
+
+    // Update Swiper layout and pagination after DOM changes
+    projectsSwiper.update();
+    projectsSwiper.slideTo(0);
   });
 });
-
