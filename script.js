@@ -20,15 +20,19 @@ const projectsSwiper = new Swiper('.projects-swiper', {
   loop: true,
   touchRatio: 1.5, // Makes it easier to swipe
   coverflowEffect: {
-    rotate: 20,
-    stretch: 50, // Adds space between the slides
-    depth: 100,
+    rotate: 30,
+    stretch: 30, // Spaced out slightly to prevent ugly overlapping
+    depth: 200, // Deep background receding
     modifier: 1,
     slideShadows: true,
   },
   pagination: {
     el: '.projects-swiper .swiper-pagination',
     clickable: true,
+  },
+  navigation: {
+    nextEl: '.projects-swiper .swiper-button-next',
+    prevEl: '.projects-swiper .swiper-button-prev',
   },
 });
 
@@ -42,15 +46,19 @@ const certsSwiper = new Swiper('.certs-swiper', {
   loop: false,
   touchRatio: 1.5,
   coverflowEffect: {
-    rotate: 15,
-    stretch: 50,
-    depth: 100,
+    rotate: 30,
+    stretch: 30,
+    depth: 200,
     modifier: 1,
     slideShadows: true,
   },
   pagination: {
     el: '.certs-swiper .swiper-pagination',
     clickable: true,
+  },
+  navigation: {
+    nextEl: '.certs-swiper .swiper-button-next',
+    prevEl: '.certs-swiper .swiper-button-prev',
   },
 });
 
