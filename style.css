@@ -1066,20 +1066,57 @@ svg{
     padding: 60px 0;
   }
 
+  /* Hero Section Alignment */
+  .hero-wrapper {
+    text-align: center;
+  }
+
+  .hero-wrapper .lead {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+
+  .hero-wrapper .d-flex.gap-3 {
+    justify-content: center;
+  }
+
   /* Navbar mobile menu */
   .navbar-collapse {
-    padding: 15px 0;
+    padding: 1rem;
+    background-color: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    margin-top: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
   }
 
   .navbar-collapse .nav-link {
     margin-left: 0;
-    padding: 8px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
   }
 
-  .navbar-collapse .btn-success {
-    display: inline-block;
-    margin-top: 10px;
+  .navbar-collapse .nav-link:hover {
+    background: rgba(34, 197, 94, 0.1);
+  }
+
+  .navbar-collapse .btn-resume-glow {
+    display: block;
+    margin-top: 15px;
     margin-left: 0 !important;
+    text-align: center;
+  }
+  
+  /* About text alignment */
+  .about-text {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .about-text p {
+    text-align: center;
   }
 }
 
@@ -1098,6 +1135,7 @@ svg{
   .hero-wrapper {
     min-height: auto;
     padding: 35px 0 50px;
+    text-align: center;
   }
 
   .hero-wrapper h1.display-1 {
@@ -1111,16 +1149,27 @@ svg{
   .hero-wrapper .lead {
     width: 100% !important;
     font-size: 0.95rem;
+    margin: 0 auto;
   }
 
   .hero-wrapper .d-flex.gap-3 {
     flex-direction: column;
     gap: 12px !important;
+    justify-content: center;
   }
 
   .hero-wrapper .d-flex.gap-3 .btn {
     width: 100%;
     text-align: center;
+  }
+  
+  /* Code Card Adjustments */
+  .hero-card {
+    padding: 15px;
+  }
+
+  .code-display {
+    font-size: 0.75rem;
   }
 
   /* About Profile */
@@ -1243,6 +1292,10 @@ svg{
 
   .hero-wrapper .h3 {
     font-size: 1rem;
+  }
+  
+  .code-display {
+    font-size: 0.65rem;
   }
 
   .about-pfp-ring {
