@@ -471,16 +471,16 @@
       <!-- Project Filter Buttons -->
       <div class="project-filters d-flex flex-wrap justify-content-center gap-2 mb-5">
         <button class="filter-btn active" data-filter="all">
-          <i class="bi bi-grid-fill"></i> All <span class="filter-count">8</span>
+          <i class="bi bi-grid-fill"></i> All <span class="filter-count">9</span>
         </button>
         <button class="filter-btn" data-filter="ai-realtime">
-          <i class="bi bi-cpu-fill"></i> AI & Real-Time <span class="filter-count">2</span>
+          <i class="bi bi-cpu-fill"></i> AI & Real-Time <span class="filter-count">3</span>
         </button>
         <button class="filter-btn" data-filter="fullstack">
-          <i class="bi bi-layers-fill"></i> Full-Stack <span class="filter-count">3</span>
+          <i class="bi bi-layers-fill"></i> Full-Stack <span class="filter-count">4</span>
         </button>
         <button class="filter-btn" data-filter="backend">
-          <i class="bi bi-hdd-network-fill"></i> Backend & APIs <span class="filter-count">2</span>
+          <i class="bi bi-hdd-network-fill"></i> Backend & APIs <span class="filter-count">3</span>
         </button>
         <button class="filter-btn" data-filter="frontend">
           <i class="bi bi-window-fullscreen"></i> Frontend & Tools <span class="filter-count">3</span>
@@ -489,6 +489,35 @@
 
       <div class="swiper projects-swiper" id="projectsGrid">
         <div class="swiper-wrapper">
+
+        <!-- 0. SentinelX — Capstone Project (Featured) -->
+        <div class="swiper-slide project-item fade-up" data-category="ai-realtime fullstack backend">
+          <div class="project-card project-featured h-100 p-4">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div>
+                <h3 class="h4 mb-0 text-white">SentinelX — Data Loss Prevention System</h3>
+                <span class="badge badge-ai mt-1">AI / ML</span>
+                <span class="badge bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25 mt-1">🎓 Capstone Project</span>
+                <span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25 mt-1">🚧 Under Development</span>
+              </div>
+              <i class="devicon-python-plain fs-4 text-success"></i>
+            </div>
+            <p class="project-desc">
+              An enterprise-grade Data Loss Prevention (DLP) system designed to detect, classify, and prevent unauthorized exfiltration of sensitive data from Windows endpoints. Combines real-time file monitoring, behavioral analytics, ML-based classification (Logistic Regression, Random Forest, Hybrid), and policy-based enforcement with a React SOC dashboard and live WebSocket alerts.
+            </p>
+            <div class="tech-stack mb-4">
+              <span class="badge bg-dark-subtle border border-success-subtle text-success me-1">Python</span>
+              <span class="badge bg-dark-subtle border border-success-subtle text-success me-1">FastAPI</span>
+              <span class="badge bg-dark-subtle border border-success-subtle text-success me-1">React</span>
+              <span class="badge bg-dark-subtle border border-success-subtle text-success me-1">TypeScript</span>
+              <span class="badge bg-dark-subtle border border-success-subtle text-success me-1">SQLite</span>
+              <span class="badge bg-dark-subtle border border-success-subtle text-success me-1">WebSockets</span>
+            </div>
+            <div class="project-links mt-auto">
+              <a href="https://github.com/SartazEAlam/SentinelX" target="_blank" class="btn btn-sm btn-outline-light">View on GitHub</a>
+            </div>
+          </div>
+        </div>
 
         <!-- 1. AstraAI — Resume Analyzer and Builder (Featured) -->
         <div class="swiper-slide project-item fade-up" data-category="ai-realtime fullstack">
